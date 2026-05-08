@@ -1,4 +1,6 @@
-for dir in $(find /Users/marcello.macnack/1-idey/2-GIT-COR/macos-tools/ -mindepth 1 -maxdepth 4 -type d ! -name ".git" ! -path "*/.git/*"); do
+SEARCH_DIR="/Users/marcello.macnack/1-idey/2-GIT-COR/macos-tools/"
+
+for dir in $(find "$SEARCH_DIR" -mindepth 1 -maxdepth 4 -type d ! -name ".git" ! -path "*/.git/*"); do
     if [ -d "$dir/.git" ]; then
       echo "✓ GIT  $dir"
     else
