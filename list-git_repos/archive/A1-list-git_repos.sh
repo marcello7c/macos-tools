@@ -1,0 +1,1 @@
+find /Users/marcello.macnack/1-idey/1-PRODUCTION-local/LGF -maxdepth 4 -name ".git" -type d | while read gitdir; do echo "GIT REPO: $(dirname $gitdir)"; done
