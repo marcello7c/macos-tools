@@ -1,5 +1,8 @@
-GD="$HOME/Library/CloudStorage/GoogleDrive-USER@gmail.com/Shared drives"
-TARGET="$GD/FOLDER_NAME"
+GOOGLE_USER="user@gmail.com"    # CHANGE TO YOUR USERNAME
+FOLDER_PATH="root-folder/sub-folder"    # LEAVE My Drive/ AND EVERYTHING BEFORE OUT
+
+GD="$HOME/Library/CloudStorage/GoogleDrive-${GOOGLE_USER}/My Drive"
+TARGET="$GD/$FOLDER_PATH"
 
 find "$TARGET" -type f -print0 \
   | xargs -0 stat -f '%z' \
